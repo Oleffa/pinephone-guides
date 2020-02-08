@@ -23,30 +23,6 @@ On the pinephone:
 6. Once booted, use fdisk again to create a new partition on mmcblk2
 7. Power off the device and remove the SD card. Voila, the pinephone now boots from eMMC
 
-
-## SSH
-1. SSH should work out of the box with user phable and password phablet.
-```
-ssh phablet@<<pinephone ip>>
-```
-To get the ip of the pinephone run `ifconfig` in the terminal.
-2. To easily copy data to the pinephone install and use rsync:
-```
-sudo apt install rsync
-rsync -avz <<path to file on host computer>> phablet@<<pinephoneip>>:/home/phablet/Downloads/
-```
-
-## Networking
-1. Wifi Problems
-```
-sudo nmcli radio wifi off
-sudo nmcli radio wifi on
-sudo reboot
-```
-It seems that wifi often dies and can't be enabled when the charger is not plugged in.
-
-2. Modem (For UBPorts check the [UBPorts guide](https://github.com/Oleffa/pinephone-guides/blob/master/UBPorts.md).)
-
 ## Hardware
 1. To open the back of the phone use your fingernails and the groove at the bottom left corner of the phone.
 2. When first taking the phone into use remove the plastic isolator that separates the battery from the pins.
