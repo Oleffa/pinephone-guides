@@ -10,8 +10,8 @@
 1. Run `sudo apt update && sudo apt upgrade` often to receive the latest updates [2].
 2. Enable sound
 ```
-sudo modprobe snd_soc_simple_amplifier
-sudo modprobe snd_soc_simple_card_utils
+modprobe snd_soc_simple_amplifier
+modprobe snd_soc_simple_card_utils
 amixer -c 0 set 'AIF1 Slot 0 Digital DAC' unmute
 ```
 Set audio volume:
