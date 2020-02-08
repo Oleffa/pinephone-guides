@@ -14,6 +14,17 @@ sudo modprobe snd_soc_simple_amplifier
 sudo modprobe snd_soc_simple_card_utils
 amixer -c 0 set 'AIF1 Slot 0 Digital DAC' unmute
 ```
+Set audio volume:
+```
+amixer sset 'Line Out' 100%
+```
+Or use the `alsamixer` to set the volume of "Line Out" (speakers) or "Headphones" (headphones jack)
+
+3. Start modem (I did not test that yet)
+```
+sudo /usr/share/ofono/scripts/enable-modem
+sudo /usr/share/ofono/scripts/online-modem
+```
 
 
 ## Sources:
