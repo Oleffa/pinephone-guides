@@ -19,7 +19,7 @@ On the pinephone:
 1. Use `lsblk` to determine the device names. For me the internal eMMC was /dev/mmcblk2. 
 2. Use `dd bs=4M if=/path/to/image/ubuntu-touch-pinephone.img of=/dev/mmcblk2` to copy the image to the eMMC.
 3. Remove the SD card and reboot the phone.
-4. Create a new secondary partition on the pinephone (the one created to boot from by dd is only 4 GB in size.). You can't resize the partitions while it is mounted, so shut down the phone and put in th SD card again to boot from it.
+4. Create a new secondary partition on the pinephone (the one created to boot from by dd is only 4 GB in size.). You can't resize the partitions while it is mounted, so shut down the phone and put in the SD card again to boot from it.
 6. Once booted, use fdisk again to create a new partition on mmcblk2
 7. Power off the device and remove the SD card. Voila, the pinephone now boots from eMMC
 
@@ -27,7 +27,7 @@ On the pinephone:
 ## SSH
 1. SSH should work out of the box with user phable and password phablet.
 ```
-ssh phable@<<pinephone ip>>
+ssh phablet@<<pinephone ip>>
 ```
 To get the ip of the pinephone run `ifconfig` in the terminal.
 2. To easily copy data to the pinephone install and use rsync:
@@ -49,4 +49,4 @@ It seems that wifi often dies and can't be enabled when the charger is not plugg
 
 ## Hardware
 1. To open the back of the phone use your fingernails and the groove at the bottom left corner of the phone.
-2. When first taking the phone into use remove the plastic isolator that separates the battery fom the pins.
+2. When first taking the phone into use remove the plastic isolator that separates the battery from the pins.
