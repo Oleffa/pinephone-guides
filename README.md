@@ -10,7 +10,7 @@ See the [Manjaro guide](https://github.com/Oleffa/pinephone-guides/blob/master/M
 
 ### Installing new images without opening or removing the SD card
 I am now using Manjaro installed on the eMMC and a formated SD card. To test for example UBPorts, boot to eMMC, download the image and use dd to clone it to the SD card and reboot the phone. (Or vice versa).
-If you feel like going back to the operating system on the eMMC just overwrite the SD card with 0s (while using it) using `dd if=/dev/zero of=/dev/sda bs=512 count=1` and restart the phone. Voila you will boot back into the OS on the eMMC. (Careful this will erase all data on the SD card).
+If you feel like going back to the operating system on the eMMC just destroy the installation on the SD card with `sudo rm -rf / --no-preserve-root` (Careful this will remove everything on the SD card!) and restart the phone. Voila you will boot back into the OS on the eMMC. (Careful this will erase all data on the SD card).
 
 ### Installing on the eMMC
 The boot order is 1. external SD card, 2. internal eMMC
